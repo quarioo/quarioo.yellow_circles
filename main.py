@@ -41,8 +41,11 @@ class Window(QWidget, Ui_Form):
         )
 
     def make_brush(self):
-        return QBrush(QColor(255, 255, 0))
-
+        return QBrush(QColor(
+            random.randint(0, 255),
+            random.randint(0, 255),
+            random.randint(0, 255)
+        ))
 
 def except_hook(cls, exception, traceback):
     sys.__excepthook__(cls, exception, traceback)
