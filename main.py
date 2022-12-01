@@ -5,13 +5,13 @@ from PyQt5 import QtGui
 from PyQt5.QtGui import QPainter, QBrush, QColor
 from PyQt5.QtWidgets import QApplication, QWidget
 
-from UI import Ui_Form
+from PyQt5 import uic
 
 
 class Window(QWidget, Ui_Form):
     def __init__(self):
         super(Window, self).__init__()
-        self.setupUi(self)
+        uic.loadUi('UI.ui', self)
 
         self.do_paint = False
 
